@@ -1,0 +1,15 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css");
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Grape+Nuts&display=swap");
+
+@import "tailwindcss";
+
+@import "../styles/typography.css";
+@import "../styles/color.css";
+
+@layer base {
+  body {
+    font-family: var(--font-pretendard);
+    color: var(--gray-800);
+    background-color: var(--bg-grad);
+  }
+}
