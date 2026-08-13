@@ -1,8 +1,4 @@
 @theme {
-  /* =========================================
-     1. Base Color Palette (이미지 기반)
-     ========================================= */
-
   /* Blue Scale */
   --color-blue-100: #dbeafe;
   --color-blue-300: #86b1f8;
@@ -23,7 +19,7 @@
   --color-gray-900: #000000;
 
   /* =========================================
-     2. Semantic Variables
+     Semantic Variables
      ========================================= */
 
   --color-light: var(--color-blue-100);
@@ -34,7 +30,7 @@
 }
 
 /* =========================================
-   3. Gradients (컬러 유틸이 아니라 배경 이미지이므로 @theme 밖에 둠)
+   Gradients
    ========================================= */
 :root {
   --bg-grad: linear-gradient(
@@ -53,4 +49,10 @@
     #7faef9 33.66%,
     var(--color-light, #dbeafe) 81.25%
   );
+}
+
+@theme {
+  --background-image-bg-grad: var(--bg-grad);
+  --background-image-logo-grad: var(--logo-grad);
+  --background-image-subbg-grad: var(--subbg-grad);
 }
