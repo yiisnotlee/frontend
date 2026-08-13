@@ -1,44 +1,46 @@
-:root {
+@theme {
   /* =========================================
      1. Base Color Palette (이미지 기반)
      ========================================= */
 
   /* Blue Scale */
-  --blue-100: #dbeafe;
-  --blue-300: #86b1f8;
-  --blue-500: #3b82f6;
-  --blue-700: #0047ab;
-  --blue-900: #002868;
+  --color-blue-100: #dbeafe;
+  --color-blue-300: #86b1f8;
+  --color-blue-500: #3b82f6;
+  --color-blue-700: #0047ab;
+  --color-blue-900: #002868;
 
   /* Grayscale */
-  --gray-0: #ffffff;
-  --gray-100: #f0f2f5;
-  --gray-200: #d2d4d8;
-  --gray-300: #b5b7ba;
-  --gray-400: #97999d;
-  --gray-500: #797c7f;
-  --gray-600: #5c5e62;
-  --gray-700: #3e4144;
-  --gray-800: #202327;
-  --gray-900: #000000;
+  --color-gray-0: #ffffff;
+  --color-gray-100: #f0f2f5;
+  --color-gray-200: #d2d4d8;
+  --color-gray-300: #b5b7ba;
+  --color-gray-400: #97999d;
+  --color-gray-500: #797c7f;
+  --color-gray-600: #5c5e62;
+  --color-gray-700: #3e4144;
+  --color-gray-800: #202327;
+  --color-gray-900: #000000;
 
   /* =========================================
      2. Semantic Variables
      ========================================= */
 
-  --color-light: var(--blue-100);
-  --color-light-medium: var(--blue-300);
-  --color-medium: var(--blue-500);
-  --color-primary: var(--blue-700);
-  --color-dark: var(--blue-900);
+  --color-light: var(--color-blue-100);
+  --color-light-medium: var(--color-blue-300);
+  --color-medium: var(--color-blue-500);
+  --color-primary: var(--color-blue-700);
+  --color-dark: var(--color-blue-900);
+}
 
-  /* =========================================
-     3. Gradients
-     ========================================= */
+/* =========================================
+   3. Gradients (컬러 유틸이 아니라 배경 이미지이므로 @theme 밖에 둠)
+   ========================================= */
+:root {
   --bg-grad: linear-gradient(
     305deg,
     var(--color-light, #dbeafe) -10.41%,
-    var(--gray-0, #ffffff) 108.19%
+    var(--color-gray-0, #ffffff) 108.19%
   );
   --logo-grad: linear-gradient(
     166deg,
