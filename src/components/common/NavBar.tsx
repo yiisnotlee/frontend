@@ -17,10 +17,6 @@ function LogoMark() {
   return <Image src={Logo} alt="yiisnotlee" width={24} height={24} />;
 }
 
-function GlobalIcon() {
-  return <Image src={Global} alt="Global" />;
-}
-
 function useScrollSpy(keys: NavItemKey[]) {
   const [activeItem, setActiveItem] = useState<NavItemKey | undefined>();
 
@@ -112,7 +108,7 @@ export default function NavBar({
       {/* 우측: 언어 전환 + CONTACT */}
       <div className="flex items-center gap-4">
         <button aria-label="언어 변경" type="button" className="cursor-pointer">
-          <GlobalIcon />
+          <Global />
         </button>
         <button
           type="button"
