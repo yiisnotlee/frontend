@@ -1,9 +1,3 @@
-/* --- Pretendard --- */
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css");
-
-/* --- English Fonts (Google Fonts) --- */
-@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Grape+Nuts&display=swap");
-
 /* --- Gmarket Sans --- */
 @font-face {
   font-family: "GmarketSans";
@@ -36,10 +30,12 @@
   font-style: normal;
 }
 
-/* --- Ownglyph the sea breeze --- */
+/* --- Ownglyph the sea breeze ---
+   기존 URL (noonfonts_2402_1@1.0/Ownglyph_seabreeze-Rg.woff2) 은 404.
+   눈누(noonnu.cc) 등록 경로로 교체함: repo "2510-1", 파일명 "Ownglyph_the_sea_breeze-Rg" */
 @font-face {
   font-family: "Ownglyph_seabreeze";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_seabreeze-Rg.woff2")
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2510-1@1.0/Ownglyph_the_sea_breeze-Rg.woff2")
     format("woff2");
   font-weight: normal;
   font-style: normal;
