@@ -1,0 +1,214 @@
+/* --- Pretendard --- */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css");
+
+/* --- English Fonts (Google Fonts) --- */
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Grape+Nuts&display=swap");
+
+/* --- Gmarket Sans --- */
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 300;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff")
+    format("woff");
+}
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+}
+@font-face {
+  font-family: "GmarketSans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+}
+
+/* --- KCC-Kimhwanki --- */
+@font-face {
+  font-family: "KCC-Kimhwanki";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2012@1.0/KCC-Kimhwanki.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* --- Ownglyph the sea breeze --- */
+@font-face {
+  font-family: "Ownglyph_seabreeze";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/Ownglyph_seabreeze-Rg.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* =========================================
+   2. Theme Variables (@theme)
+   ========================================= */
+@theme {
+  /* Font Families */
+  --font-pretendard: "Pretendard Variable", "Pretendard", sans-serif;
+  --font-gmarket: "GmarketSans", sans-serif;
+  --font-kcc: "KCC-Kimhwanki", sans-serif;
+  --font-ownglyph: "Ownglyph_seabreeze", sans-serif;
+  --font-covered: "Covered By Your Grace", cursive;
+  --font-grape: "Grape Nuts", cursive;
+
+  /* Font Weights */
+  --weight-r: 400;
+  --weight-m: 500;
+  --weight-sb: 600;
+  --weight-eb: 800;
+}
+
+/* =========================================
+   3. Typography Utilities (em 단위 적용, 1em = 16px 기준)
+   ========================================= */
+
+/* -----------------------------------------
+   Pretendard Utilities
+   ----------------------------------------- */
+.h-64-eb {
+  font-family: var(--font-pretendard);
+  font-size: 4em; /* 64px */
+  font-weight: var(--weight-eb);
+  line-height: 1.40625; /* 90 / 64 */
+}
+
+.sh-36-sb {
+  font-family: var(--font-pretendard);
+  font-size: 2.25em; /* 36px */
+  font-weight: var(--weight-sb);
+  line-height: normal;
+}
+
+.sh-32-sb {
+  font-family: var(--font-pretendard);
+  font-size: 2em; /* 32px */
+  font-weight: var(--weight-sb);
+  line-height: 1.25; /* 40 / 32 */
+}
+
+.sh-24-m {
+  font-family: var(--font-pretendard);
+  font-size: 1.5em; /* 24px */
+  font-weight: var(--weight-m);
+  line-height: normal;
+}
+
+.b-24-sb {
+  font-family: var(--font-pretendard);
+  font-size: 1.5em; /* 24px */
+  font-weight: var(--weight-sb);
+  line-height: normal;
+}
+
+.b-20-r {
+  font-family: var(--font-pretendard);
+  font-size: 1.25em; /* 20px */
+  font-weight: var(--weight-r);
+  line-height: normal;
+}
+
+.b-16-sb {
+  font-family: var(--font-pretendard);
+  font-size: 1em; /* 16px */
+  font-weight: var(--weight-sb);
+  line-height: normal;
+}
+
+.b-16-m {
+  font-family: var(--font-pretendard);
+  font-size: 1em; /* 16px */
+  font-weight: var(--weight-m);
+  line-height: normal;
+}
+
+.b-16-r {
+  font-family: var(--font-pretendard);
+  font-size: 1em; /* 16px */
+  font-weight: var(--weight-r);
+  line-height: normal;
+}
+
+.b-14-m {
+  font-family: var(--font-pretendard);
+  font-size: 0.875em; /* 14px */
+  font-weight: var(--weight-m);
+  line-height: normal;
+}
+
+.b-14-r {
+  font-family: var(--font-pretendard);
+  font-size: 0.875em; /* 14px */
+  font-weight: var(--weight-r);
+  line-height: normal;
+}
+
+.c-10-m {
+  font-family: var(--font-pretendard);
+  font-size: 0.625em; /* 10px */
+  font-weight: var(--weight-m);
+  line-height: normal;
+}
+
+/* -----------------------------------------
+   Gmarket Sans Utilities
+   ----------------------------------------- */
+.g-b-16-sb {
+  font-family: var(--font-gmarket);
+  font-size: 1em; /* 16px */
+  font-weight: var(--weight-sb);
+  line-height: normal;
+}
+
+.g-b-14-m {
+  font-family: var(--font-gmarket);
+  font-size: 0.875em; /* 14px */
+  font-weight: var(--weight-m);
+  line-height: normal;
+}
+
+.g-b-10-m {
+  font-family: var(--font-gmarket);
+  font-size: 0.625em; /* 10px */
+  font-weight: var(--weight-m);
+  line-height: normal;
+}
+
+/* -----------------------------------------
+   Special Korean Fonts
+   ----------------------------------------- */
+.kcc-40 {
+  font-family: var(--font-kcc);
+  font-size: 2.5em; /* 40px */
+  font-weight: normal;
+  line-height: normal;
+}
+
+.own-96 {
+  font-family: var(--font-ownglyph);
+  font-size: 6em; /* 96px */
+  font-weight: normal;
+  line-height: normal;
+}
+
+/* -----------------------------------------
+   Special English Fonts
+   ----------------------------------------- */
+.covered-96 {
+  font-family: var(--font-covered);
+  font-size: 6em; /* 96px */
+  font-weight: normal;
+  line-height: normal;
+}
+
+.grape-40 {
+  font-family: var(--font-grape);
+  font-size: 2.5em; /* 40px */
+  font-weight: normal;
+  line-height: normal;
+}
