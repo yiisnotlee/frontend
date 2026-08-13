@@ -6,6 +6,7 @@ import {
   ProfileLinkButton,
   ProjectLinkButton,
 } from "@/src/components/button/LinkButton";
+import SectionHeading from "@/src/components/common/SectionHeading";
 
 export default function HomePage() {
   return (
@@ -24,6 +25,12 @@ export default function HomePage() {
         <ProfileLinkButton href="/profile" />
         <ProjectLinkButton href="/work" />
       </section>
+      <SectionHeading label="PROFILE" title="ABOUT ME" />
+      <SectionHeading
+        label="WORK"
+        title="PROJECTS"
+        description="포트폴리오와 관련된 프로젝트들입니다."
+      />
     </div>
   );
 }

@@ -57,6 +57,7 @@
   --weight-r: 400;
   --weight-m: 500;
   --weight-sb: 600;
+  --weight-b: 700;
   --weight-eb: 800;
 }
 
@@ -78,6 +79,13 @@
   font-family: var(--font-pretendard);
   font-size: 2.25em; /* 36px */
   font-weight: var(--weight-sb);
+  line-height: normal;
+}
+
+.sh-36-b {
+  font-family: var(--font-pretendard);
+  font-size: 2.25em; /* 36px */
+  font-weight: var(--weight-b);
   line-height: normal;
 }
 
