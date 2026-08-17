@@ -90,8 +90,8 @@ export default function Hero({
 
       {/* 하단: CTA 버튼 */}
       <div className="w-full h-fit  flex flex-row justify-center gap-10 mt-20">
-        <ProfileLinkButton href="/profile" />
-        <ProjectLinkButton href="/work" />
+        <ProfileLinkButton />
+        <ProjectLinkButton />
       </div>
     </section>
   );
