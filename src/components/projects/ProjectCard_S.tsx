@@ -6,21 +6,14 @@ import Tag from "@/src/components/common/Tag";
 import type { ReactNode } from "react";
 
 type ProjectCardSProps = {
-  /** 상단 썸네일 (목업/스크린샷 이미지) */
   thumbnail: StaticImageData | string;
-  /**
-   * 프로젝트 로고. 서버 컴포넌트(page.tsx)에서 클라이언트 컴포넌트로 넘길 때는
-   * 함수(컴포넌트 자체)가 아니라 JSX로 렌더링해서 넘겨야 함.
-   *   logo={<Logo width={20} height={20} />}   ✅
-   *   logo={Logo}                              ❌ (RSC 경계에서 함수 직렬화 에러)
-   */
   logo: ReactNode;
   title: string;
-  /** "2026.05" 형태. 진행중이면 periodEnd 생략 */
   periodStart: string;
   periodEnd?: string;
   tags: string[];
   href?: string;
+  onClick?: () => void;
 };
 
 export default function ProjectCardS({
@@ -31,36 +24,39 @@ export default function ProjectCardS({
   periodEnd,
   tags,
   href,
+  onClick,
 }: ProjectCardSProps) {
   const cardClassName =
-    "group block w-[280px] shrink-0 overflow-hidden rounded-3xl border border-gray-200 bg-gray-0 transition-shadow duration-200 hover:shadow-lg";
+    "group flex flex-col w-[280px] shrink-0 overflow-hidden h-[285px] rounded-lg border border-gray-200 bg-gray-0 text-left transition-shadow duration-200 hover:shadow-md";
 
   const content = (
     <>
       {/* 상단: 썸네일 */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-100">
+      <div className="relative h-[190px] w-full overflow-hidden bg-gray-100">
         <Image
           src={thumbnail}
           alt={`${title} 썸네일`}
           fill
-          className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+          className="object-cover "
         />
       </div>
 
       {/* 하단: 텍스트 정보 */}
-      <div className="flex flex-col gap-3 p-5">
+      <div className="flex flex-col flex-1 justify-between p-3">
         {/* 로고 + 타이틀 */}
-        <div className="flex min-w-0 items-center gap-2">
-          <span className="flex h-5 w-5 shrink-0 items-center justify-center">
-            {logo}
-          </span>
-          <span className="b-24-sb truncate text-gray-900">{title}</span>
-        </div>
+        <div className="flex flex-col gap-1">
+          <div className="flex min-w-0 items-center gap-2">
+            <span className="flex h-4 w-4 shrink-0 items-center justify-center">
+              {logo}
+            </span>
+            <span className="b-14-m truncate text-gray-900">{title}</span>
+          </div>
 
-        {/* 기간 */}
-        <span className="b-14-r text-gray-400">
-          {periodStart} {periodEnd ? `- ${periodEnd}` : "-"}
-        </span>
+          {/* 기간 */}
+          <span className="c-10-m text-gray-400">
+            {periodStart} {periodEnd ? `- ${periodEnd}` : "-"}
+          </span>
+        </div>
 
         {/* 태그 */}
         <div className="flex gap-2 overflow-hidden">
@@ -72,6 +68,16 @@ export default function ProjectCardS({
     </>
   );
 
+  // onClick이 있으면 모달을 여는 버튼으로, 없고 href만 있으면 실제 페이지 이동 링크로,
+  // 둘 다 없으면 클릭 불가능한 정적 카드로 렌더링
+  if (onClick) {
+    return (
+      <button type="button" onClick={onClick} className={cardClassName}>
+        {content}
+      </button>
+    );
+  }
+
   if (href) {
     return (
       <Link href={href} className={cardClassName}>
@@ -82,17 +88,3 @@ export default function ProjectCardS({
 
   return <div className={cardClassName}>{content}</div>;
 }
-
-/** 사용 예시 (page.tsx, 서버 컴포넌트)
- *
- * import Logo from "@/public/file.svg";
- *
- * <ProjectCardS
- *   thumbnail={jobdri}
- *   logo={<Logo width={20} height={20} />}
- *   title="JobDri"
- *   periodStart="2026.05"
- *   tags={["Next.js", "TypeScript"]}
- *   href="/work/jobdri"
- * />
- */
