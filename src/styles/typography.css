@@ -195,7 +195,7 @@
 
 .own-96 {
   font-family: var(--font-ownglyph);
-  font-size: 6em; /* 96px */
+  font-size: 96px; /* 96px */
   font-weight: normal;
   line-height: normal;
 }
@@ -205,7 +205,7 @@
    ----------------------------------------- */
 .covered-96 {
   font-family: var(--font-covered);
-  font-size: 6em; /* 96px */
+  font-size: 96px; /* 96px */
   font-weight: normal;
   line-height: normal;
 }
