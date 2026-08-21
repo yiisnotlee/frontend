@@ -8,8 +8,9 @@ import jobdri from "@/public/jobdri.png";
 import Logo from "@/public/file.svg";
 import SchoolIcon from "@/public/ic_school.svg";
 import GithubIcon from "@/public/ic_github.svg";
-import ProjectsGrid from "../components/projects/ProjectGrid";
+import ProjectsGrid from "../components/projects/ProjectsGrid";
 import { ProjectDetail } from "../components/projects/ProjectCardDetail";
+import ProjectsSection from "../components/projects/ProjectSection";
 
 const projects: ProjectDetail[] = [
   {
@@ -69,18 +70,8 @@ export default function HomePage() {
       <ProfileSection />
 
       {/* ===== 워크 ===== */}
-      <section
-        id="work"
-        className="mx-auto flex w-full max-w-300 scroll-mt-16 h-screen flex-col gap-16 px-20 py-9"
-      >
-        <SectionHeading
-          label="WORK"
-          title="PROJECTS"
-          description="포트폴리오와 관련된 프로젝트들입니다."
-        />
 
-        <ProjectsGrid projects={projects} />
-      </section>
+      <ProjectsSection />
     </div>
   );
 }
