@@ -70,7 +70,7 @@
    ----------------------------------------- */
 .h-64-eb {
   font-family: var(--font-pretendard);
-  font-size: 4em; /* 64px */
+  font-size: 64px; /* 64px */
   font-weight: var(--weight-eb);
   line-height: 1.40625; /* 90 / 64 */
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import Image, { type StaticImageData } from "next/image";
 import type { ReactNode } from "react";
 import Tag from "@/src/components/common/Tag";
@@ -10,7 +12,6 @@ import HighlightMark from "@/public/highlight_mark.png";
 type HeroProps = {
   photo: StaticImageData | string;
   headline: ReactNode;
-  /** 문단 나누고 싶으면 배열로 (스샷처럼 두 문단) */
   description: string | string[];
   tags: string[];
 };
@@ -18,7 +19,6 @@ type HeroProps = {
 export function Highlight({ children }: { children: ReactNode }) {
   return (
     <span className="relative inline-block px-1">
-      {/* 마커로 쓱 칠한 듯한 하이라이트 이미지. 텍스트보다 살짝 크게 삐져나오게 -inset */}
       <span
         className="pointer-events-none absolute -inset-x-1 inset-y-2 z-10"
         aria-hidden="true"
@@ -89,7 +89,7 @@ export default function Hero({
       </div>
 
       {/* 하단: CTA 버튼 */}
-      <div className="w-full h-fit  flex flex-row justify-center gap-10 mt-20">
+      <div className="w-full h-fit flex flex-row justify-center gap-10 mt-20">
         <ProfileLinkButton />
         <ProjectLinkButton />
       </div>

@@ -12,10 +12,12 @@ export interface Profile {
   major: string;
   address: string;
   introduction: string;
+  tags: string[];
+  description: string;
 }
 
 export interface IntroductionItem {
   text: string;
   isHighlight: boolean;
-  font: string;
+  font?: string;
 }
