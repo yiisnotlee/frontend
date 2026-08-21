@@ -91,7 +91,7 @@
 
 .sh-32-sb {
   font-family: var(--font-pretendard);
-  font-size: 2em; /* 32px */
+  font-size: 32px; /* 32px */
   font-weight: var(--weight-sb);
   line-height: 1.25; /* 40 / 32 */
 }
