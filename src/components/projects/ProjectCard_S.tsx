@@ -68,8 +68,6 @@ export default function ProjectCardS({
     </>
   );
 
-  // onClick이 있으면 모달을 여는 버튼으로, 없고 href만 있으면 실제 페이지 이동 링크로,
-  // 둘 다 없으면 클릭 불가능한 정적 카드로 렌더링
   if (onClick) {
     return (
       <button type="button" onClick={onClick} className={cardClassName}>
